@@ -4,11 +4,13 @@
 // 검색창 요소(.search) 찾기.
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
+//@@ 직접추가
+const searchIcon = searchEl.querySelector('span'); //@@ 아이콘 찾기
 
-// 검색창 요소를 클릭하면 실행.
-searchEl.addEventListener('click', function () {
+// 검색창 요소를 클릭하면 실행. @@수정 마우스오버하면 실행
+searchEl.addEventListener('mouseover', function () {
   searchInputEl.focus();
-  
+  searchIcon.innerHTML = 'done'; //@@ 마우스오버 텍스트 수정
 });
 // 검색창 요소 내부 실제 input 요소에 포커스되면 실행.
 searchInputEl.addEventListener('focus', function () {
@@ -19,8 +21,25 @@ searchInputEl.addEventListener('focus', function () {
 searchInputEl.addEventListener('blur', function () {
   searchEl.classList.remove('focused');
   searchInputEl.setAttribute('placeholder', '');
- 
+  searchIcon.innerHTML = 'search'; //@@ 블러 텍스트 수정
 });
+
+// @@메인메뉴 마우스오버시 추가메뉴 보이기
+const ps = document.querySelector(".ps");
+const psShow = document.querySelector(".ps_show");
+const nd = document.querySelector(".nd");
+const ndShow = document.querySelector(".nd_show");
+const xb = document.querySelector(".xb");
+const xbShow = document.querySelector(".xb_show");
+ps.addEventListener("mouseover", function(){
+  psShow.classList.toggle("ps_show");
+})
+nd.addEventListener("mouseover", function(){
+  ndShow.classList.toggle("nd_show");
+})
+xb.addEventListener("mouseover", function(){
+  xbShow.classList.toggle("xb_show");
+})
 
 
 /**
@@ -92,7 +111,7 @@ new Swiper('.notice .swiper', {
 new Swiper('.promotion .swiper', {
   // direction: 'horizontal', // 수평 슬라이드
   autoplay: { // 자동 재생 여부
-    delay: 5000 // 5초마다 슬라이드 바뀜
+    delay: 2500 // 5초마다 슬라이드 바뀜
   },
   loop: true, // 반복 재생 여부
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
@@ -157,6 +176,14 @@ gsap.to('.floating2', 2, {
 gsap.to('.floating3', 2.5, {
   delay: 1.5,
   y: 20,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+});
+//@@ 에니메이션추가
+gsap.to('.spoon', 1.5, {
+  delay: 3, 
+  y: 15,
   repeat: -1,
   yoyo: true,
   ease: Power1.easeInOut

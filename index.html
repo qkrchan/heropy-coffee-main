@@ -17,10 +17,10 @@
   <meta property="twitter:description" content="헤로피커피는 세계에서 가장 큰 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
   <meta property="twitter:image" content="./images/for_seo.jpg" />
   <meta property="twitter:url" content="https://epic-darwin-271c77.netlify.app" />
-  <title>Heropy Coffee</title>
-  <link rel="icon" href="./favicon.png" />
+  <title>Chan's Game Shop</title>
+  <link rel="icon" href="./favicon.ico" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <!--Google APIs-->
+  <!-- Google APIs-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -35,15 +35,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="./js/youtube.js"></script>
   <script defer src="./js/main.js"></script>
+  <script defer src="./js/post-it.js"></script>
 </head>
 <body>
 <!-- HEADER -->
 <header>
   <div class="inner">
     <a href="/" class="logo">
-      <img src="./images/visual_spoon.png" alt="Heropy Coffee" />
+      <img src="./images/logo.png" alt="Heropy Coffee" />
     </a>
-    
+    <!-- 서브메뉴 -->
     <div class="sub-menu">
       <ul class="menu">
         <li>
@@ -64,8 +65,59 @@
         <span class="material-icons">search</span>
       </div>
     </div>
-    
+    <!-- 메인메뉴 -->
     <ul class="main-menu">
+      <!-- @@메뉴추가 -->
+      <li class="item">
+        <div class="item__name">GAME</div>
+        <div class="item__contents">
+          <div class="contents__menu">
+            <ul class="inner">
+              <li>
+                <h4>게임</h4>
+                <ul>
+                  <li><a class="ps" href="https://www.playstation.com/ko-kr/">플레이스테이션</a></li>
+                  <li><a class="nd" href="https://www.nintendo.co.kr/">닌텐도</a></li>
+                  <li><a class="xb" href="https://www.xbox.com/ko-KR">엑스박스</a></li>
+                  <li><a href="./RPS/index.html">미니 게임</a></li>
+                </ul>
+              </li>
+              <li class="ps_show">
+                <h4>플레이스테이션</h4>
+                <ul>
+                  <li>게임기 본체</li>
+                  <li>게임 타이틀</li>
+                  <li>주변기기</li>
+                  <li>VR2</li>                  
+                </ul>
+              </li>
+              <li class="nd_show">
+                <h4>닌텐도</h4>
+                <ul>
+                  <li>스위치 본체</li>
+                  <li>게임 타이틀</li>
+                  <li>스위치 OLED 주변기기</li>
+                  <li>스위치 주변기기</li>                  
+                </ul>
+              </li>
+              <li class="xb_show">
+                <h4>엑스박스</h4>
+                <ul>
+                  <li>Xbox One</li>
+                  <li>Xbox Series</li>                                  
+                </ul>
+              </li>
+            </ul>           
+          <div class="contents__texture">
+            <div class="inner">
+              <h4>나와 어울리는 커피 찾기</h4>
+              <p>여러분에게 어울리는 커피를 찾아드립니다.</p>
+              <h4>최상의 커피를 즐기는 법</h4>
+              <p>여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</p>
+            </div>
+          </div>
+        </div>
+      </li>
       <li class="item">
         <div class="item__name">COFFEE</div>
         <div class="item__contents">
@@ -77,7 +129,6 @@
                   <li>헤로피커피 원두</li>
                   <li>헤로피커피 비아</li>
                   <li>헤로피커피 오리가미</li>
-                  
                 </ul>
               </li>
               <li>
@@ -365,13 +416,24 @@
       </li>
     </ul>
   </div>
+  
+  <!-- @@포스트잇 -->
+  <div class="post-it-box">
+    <div class="post-it">
+      <form action="" id="post-it-form">
+        <input type="text" id="post-it-text" placeholder="post-it" maxlength="20">
+      </form>    
+      <ul id="post-it-list"></ul>      
+    </div>    
+  </div>
+
   <!--BADGES-->
   <div class="badges">
     <div class="badge">
-      <img src="./images/badge3.jpg" alt="Badge" />
+      <img src="./images/badge1.jpg" alt="Badge" />
     </div>
     <div class="badge">
-      <img src="./images/badge1.jpg" alt="Badge" />
+      <img src="./images/badge2.jpg" alt="Badge" />
     </div>
   </div>
 </header>
@@ -380,21 +442,20 @@
 <section class="visual">
   <div class="inner">
     <div class="title fade-in">
-      <img src="./images/visual_title.png" alt="DELIGHTFUL START TO THE YEARS" />
-      <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+      <img src="./images/배너효과이미지.png" alt="배너효과이미지" />
+      <!-- <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a> -->
     </div>
     <div class="fade-in">
-      <img src="./images/visual_cup1.png" alt="Cup1" class="cup1 image" />
-      <img src="./images/visual_cup1_text.png" alt="헤이즐넛 아메리카노" class="cup1 text" />
+      <img src="./images/배너효과이미지.png" alt="배너효과이미지" class="cup1 image" />
+      <!-- <img src="./images/visual_cup1_text.png" alt="헤이즐넛 아메리카노" class="cup1 text" /> -->
     </div>
     <div class="fade-in">
-      <img src="./images/visual_cup2.png" alt="Cup2" class="cup2 image" />
-      <img src="./images/visual_cup2_text.png" alt="카라멜 크럼블 모카" class="cup2 text" />
+      <img src="./images/배너효과이미지.png" alt="배너효과이미지" class="cup2 image" />
+      <!-- <img src="./images/visual_cup2_text.png" alt="카라멜 크럼블 모카" class="cup2 text" /> -->
     </div>
     <div class="fade-in">
-      <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+      <img src="./images/배너효과이미지4.png" alt="배너효과이미지4" class="spoon" />
     </div>
-    
   </div>
 </section>
 
@@ -439,23 +500,23 @@
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="./images/promotion_slide1.jpg" alt="온라인 샵 런칭 기념, 민트 초코 브라우니 무료! 기간: 2023년 3월 3일 ~ 2023년 3월 31일" />
+        <img src="./images/프로모션1 젤다.jpg" alt="프로모션1" />
         <a href="javascript:void(0)" class="btn">자세히 보기</a>
       </div>
       <div class="swiper-slide">
-        <img src="./images/promotion_slide2.jpg" alt="뉴이어, 헤로피 커피와 함께 즐겁고 활기차게 시작하세요! 기간: 2023년 1월 1일 ~ 2월 14일" />
+        <img src="./images/프로모션2 파판.jpg" alt="프로모션2" />
         <a href="javascript:void(0)" class="btn">자세히 보기</a>
       </div>
       <div class="swiper-slide">
-        <img src="./images/promotion_slide3.jpg" alt="따뜻한 아메리카노를 주문하면, 달콤한 초코칩 쿠기 1+1 기간: 2025년 12월 16일 하루만" />
+        <img src="./images/프로모션3 마리오.jpg" alt="프로모션3" />
         <a href="javascript:void(0)" class="btn">자세히 보기</a>
       </div>
       <div class="swiper-slide">
-        <img src="./images/promotion_slide4.jpg" alt="행사 기간동안 음료 주문시, 모든 디저트 80% 할인! 기간: 2023년 4월 1일 ~ 2024년 4월 1일" />
+        <img src="./images/프로모션4 플스.jpg" alt="프로모션4" />
         <a href="javascript:void(0)" class="btn">자세히 보기</a>
       </div>
       <div class="swiper-slide">
-        <img src="./images/promotion_slide5.jpg" alt="골드 회원 가입시, 따뜻한 코코아를 무료로 드립니다. 기간: 2024년 1월 24일 ~ 1월 30일" />
+        <img src="./images/프로모션5 닌텐도.jpg" alt="프로모션5" />
         <a href="javascript:void(0)" class="btn">자세히 보기</a>
       </div>
     </div>

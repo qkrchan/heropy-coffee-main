@@ -105,13 +105,17 @@ header {
 header > .inner {
   height: 120px;
 }
-header .logo {
+header .logo {  
   height: 75px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+}
+/* @@ 로고 이미지 수정 */
+header .logo > img{
+  width: 75px;
 }
 header .sub-menu {
   position: absolute;
@@ -166,7 +170,7 @@ header .sub-menu .search input {
   transition: width .4s;
 }
 header .sub-menu .search input:focus {
-  width: 400px;
+  width: 190px;
   border-color: #EA9926;
 }
 header .sub-menu .search .material-icons {
@@ -178,9 +182,11 @@ header .sub-menu .search .material-icons {
   margin: auto;
   transition: .4s;
 }
+/* @@ 검색창 포커스 시 투명도 주석처리
 header .sub-menu .search.focused .material-icons {
   opacity: 0;
 }
+*/
 header .main-menu {
   position: absolute;
   bottom: 0;
@@ -222,15 +228,31 @@ header .main-menu .item .item__contents .contents__menu > ul > li h4 {
   font-size: 14px;
   color: #fff;
 }
-
-
-
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
   color: #999;
   cursor: pointer;
 }
+/* @@a태그 스타일변경 */
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a{
+  color: gainsboro;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a:visited{
+  color: bisque;
+}
+/* @@ 추가 메뉴 숨김 */
+header .main-menu li.ps_show{
+  display: none;
+}
+header .main-menu li.nd_show{
+  display: none;
+}
+header .main-menu li.xb_show{
+  display: none;
+}
+
+
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   color: #EA9926;
 }
@@ -246,6 +268,37 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #EA9926;
   margin: 4px 0 14px;
+}
+
+/* @@포스트잇 */
+header .post-it-box{
+  position: absolute;
+  top: 132px;
+  left: 12px;
+  background-color: gainsboro;
+  opacity: 0.8;
+}
+header .post-it-box .post-it{
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+  cursor: text;
+}
+header .post-it-box #post-it-text::placeholder{
+  color: black;
+}
+header .post-it-box #post-it-text{
+  all: unset;
+  border-bottom: 3px solid burlywood;
+}
+header .post-it-box #post-it-list{
+  color: black;
+  font-family: system-ui, sans-serif;
+}
+header .post-it-box #post-it-list button{
+  all: unset;  
+  cursor: pointer;
 }
 /*BADGES*/
 header .badges {
@@ -265,8 +318,9 @@ header .badges .badge {
 /*VISUAL*/
 .visual {
   margin-top: 120px;
-  background-image: url("../images/visual_bg.jpg");
+  background-image: url("../images/배너이미지.jpg");
   background-position: center;
+  background-size: 100%;
 }
 .visual .inner {
   height: 646px;
@@ -283,38 +337,31 @@ header .badges .badge {
 }
 .visual .cup1.image {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: -47px;
 }
-.visual .cup1.text {
+/* .visual .cup1.text {
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 60px;
-}
+} */
 .visual .cup2.image {
   position: absolute;
   bottom: 0;
-  right: 162px;
+  left: 162px;
 }
-.visual .cup2.text {
+/* .visual .cup2.text {
   position: absolute;
   top: 186px;
   right: 412px;
-}
+} */
 .visual .spoon {
-  position: absolute;
-  bottom: 0;
-  left: 275px;
+  width: 100%;
+  height: 100%;
+  position: absolute;  
 }
 .visual .fade-in {
   opacity: 0;
-}
-.visual .asd{
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50px;
-  bottom: 0;
 }
 
 
@@ -421,6 +468,11 @@ header .badges .badge {
   position: relative;
   opacity: .5;
   transition: opacity 1s;
+}
+/* @@ 프로모션이미지 */
+.promotion .swiper-slide img{
+  width: 100%;
+  height: 90%;  
 }
 .promotion .swiper-slide-active {
   opacity: 1;
