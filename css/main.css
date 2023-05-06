@@ -275,8 +275,12 @@ header .post-it-box{
   position: absolute;
   top: 132px;
   left: 12px;
-  background-color: gainsboro;
   opacity: 0.8;
+  background-image: url("../images/포트스잇이미지.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 20px 20px 20px;
+  height: 300px;
 }
 header .post-it-box .post-it{
   border-radius: 10px;
