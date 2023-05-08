@@ -96,7 +96,7 @@ const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
   // 각 요소들을 순서대로(delay) 보여지게 함!
   gsap.to(fadeEl, 1, {
-    delay: (index + 1) * .7,
+    delay: (index + 1.2) * .6,
     opacity: 1
   });
 });

@@ -99,7 +99,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 9;
-  background-color: #F6F5F0;
+  background-color: gainsboro;
   border-bottom: 1px solid #c8c8c8;
 }
 header > .inner {
