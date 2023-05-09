@@ -536,7 +536,7 @@ header .badges .badge {
 
 
 /*REWARDS*/
-.rewards {
+/* .rewards {
   position: relative;
 }
 .rewards .bg-left {
@@ -577,7 +577,7 @@ header .badges .badge {
   margin-top: 10px;
   flex-grow: 1;
 }
-
+ */
 
 /*YOUTUBE VIDEO*/
 .youtube {
@@ -623,7 +623,7 @@ header .badges .badge {
 .youtube .floating2 {
   position: absolute;
   top: 350px;
-  left: 150px;
+  right: 100px;
 }
 
 
@@ -641,8 +641,8 @@ header .badges .badge {
 }
 .season-product .text-group {
   position: absolute;
-  top: 110px;
-  right: 100px;
+  top: 150px;
+  right: 150px;
 }
 .season-product .text-group .title {
   margin-bottom: 10px;
@@ -650,11 +650,15 @@ header .badges .badge {
 .season-product .text-group .description {
   margin-bottom: 15px;
 }
+#pd-text{
+  width: 500px;
+}
 
 
 /*RESERVE COFFEE*/
 .reserve-coffee {
-  background-image: url("../images/reserve_bg.jpg");
+  /* background-image: url("../images/reserve_bg.jpg"); */
+  background-color: rgb(86, 71, 52);
 }
 .reserve-coffee .inner {
   height: 400px;
@@ -674,11 +678,14 @@ header .badges .badge {
   top: 0;
   right: 0;
 }
+#rs-img{
+  width: 600px;
+}
 
 
 /*PICK YOUR FAVORITE*/
 .pick-your-favorite {
-  background-image: url("../images/favorite_bg.jpg");
+  background-image: url("../images/리워드이미지.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -686,6 +693,7 @@ header .badges .badge {
 }
 .pick-your-favorite .inner {
   padding: 110px 0;
+  height: 800px;
 }
 .pick-your-favorite .text-group {
   width: 362px;
@@ -700,6 +708,7 @@ header .badges .badge {
 .pick-your-favorite .text-group .description {
   margin-bottom: 40px;
 }
+#pick-fav-text{}
 
 
 /*RESERVE STORE*/
